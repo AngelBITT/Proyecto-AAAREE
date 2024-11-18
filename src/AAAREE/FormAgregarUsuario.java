@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package AAAREE;
-
+import java.awt.*;
+import javax.swing.*;
 /**
  *
  * @author emili
@@ -16,6 +17,9 @@ public class FormAgregarUsuario extends javax.swing.JDialog {
     public FormAgregarUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        setTitle("Formulario para AGREGAR USUARIO");
+        getContentPane().setBackground(new java.awt.Color(153, 255, 153));
     }
 
     /**
@@ -27,35 +31,40 @@ public class FormAgregarUsuario extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        LabelNombre = new javax.swing.JLabel();
+        LabelApellidoP = new javax.swing.JLabel();
+        LabelApellidoM = new javax.swing.JLabel();
+        LabelTelefono = new javax.swing.JLabel();
+        TxtFieldNombre = new javax.swing.JTextField();
+        TxtFieldApellidoP = new javax.swing.JTextField();
+        TxtFieldApellidoM = new javax.swing.JTextField();
+        TxtFieldTelefono = new javax.swing.JTextField();
+        ButtonGuardar = new javax.swing.JButton();
+        ButtonCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 153));
         setForeground(new java.awt.Color(204, 255, 153));
 
-        jLabel1.setText("Nombre(s)");
+        LabelNombre.setText("Nombre(s)");
 
-        jLabel2.setText("Apellido Paterno");
+        LabelApellidoP.setText("Apellido Paterno");
 
-        jLabel3.setText("Apellido Materno");
+        LabelApellidoM.setText("Apellido Materno");
 
-        jLabel4.setText("Número Telefónico");
+        LabelTelefono.setText("Número Telefónico");
 
-        jButton1.setText("Aceptar");
-
-        jButton2.setText("Cancelar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonGuardar.setText("Guardar");
+        ButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonGuardarActionPerformed(evt);
+            }
+        });
+
+        ButtonCancelar.setText("Cancelar");
+        ButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCancelarActionPerformed(evt);
             }
         });
 
@@ -66,22 +75,22 @@ public class FormAgregarUsuario extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                    .addComponent(LabelTelefono)
+                    .addComponent(LabelApellidoM)
+                    .addComponent(LabelApellidoP)
+                    .addComponent(LabelNombre))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField4))
+                    .addComponent(TxtFieldApellidoM)
+                    .addComponent(TxtFieldApellidoP)
+                    .addComponent(TxtFieldNombre)
+                    .addComponent(TxtFieldTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(ButtonGuardar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(ButtonCancelar)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -89,35 +98,94 @@ public class FormAgregarUsuario extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelNombre)
+                    .addComponent(TxtFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelApellidoP)
+                    .addComponent(TxtFieldApellidoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelApellidoM)
+                    .addComponent(TxtFieldApellidoM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelTelefono)
+                    .addComponent(TxtFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 87, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(ButtonCancelar)
+                    .addComponent(ButtonGuardar))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        ButtonCancelar.addActionListener(e -> {
+            TxtFieldNombre.setText("");
+            TxtFieldApellidoP.setText("");
+            TxtFieldApellidoM.setText("");
+            TxtFieldTelefono.setText("");
+            this.dispose();
+        });
+    }//GEN-LAST:event_ButtonCancelarActionPerformed
+
+    private void ButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonGuardarActionPerformed
+        if (TxtFieldNombre.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(
+                this,
+                "El campo NOMBRE no puede estar vacío, por favor ingrese un nombre válido",
+                "Error de validación",
+                JOptionPane.ERROR_MESSAGE
+        );
+    } else {
+        String UsuarioNombre = TxtFieldNombre.getText();
+        String UsuarioApellidoP = TxtFieldApellidoP.getText();
+        String UsuarioApellidoM = TxtFieldApellidoM.getText();
+        String UsuarioTelefono = TxtFieldTelefono.getText();
+
+        ConectorBD co = new ConectorBD();
+        int Respuesta = co.CreateUsuario(UsuarioNombre, UsuarioApellidoP, UsuarioApellidoM, UsuarioTelefono);
+
+        if (Respuesta == 1) {
+            String[] opciones = {"Agregar Otro Usuario", "Salir"};
+            int seleccion = JOptionPane.showOptionDialog(
+                    this,
+                    "Registro de usuario completado.\n¿Qué te gustaría hacer a continuación?",
+                    "¡Usuario Agregado!",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    opciones,
+                    opciones[0]
+            );
+
+            // Manejar la selección del usuario
+            if (seleccion == JOptionPane.YES_OPTION) {
+                // Opción "Agregar Otro Usuario": Limpiar campos y mantener el formulario abierto
+                TxtFieldNombre.setText("");
+                TxtFieldApellidoP.setText("");
+                TxtFieldApellidoM.setText("");
+                TxtFieldTelefono.setText("");
+            } else if (seleccion == JOptionPane.NO_OPTION) {
+                // Opción "Salir": Cerrar el formulario
+                this.dispose();
+            }
+        } else {
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Registro fallido",
+                    "No se ha podido agregar el usuario",
+                    JOptionPane.ERROR_MESSAGE
+            );
+        }
+    }
+    }//GEN-LAST:event_ButtonGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,15 +230,15 @@ public class FormAgregarUsuario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JButton ButtonCancelar;
+    private javax.swing.JButton ButtonGuardar;
+    private javax.swing.JLabel LabelApellidoM;
+    private javax.swing.JLabel LabelApellidoP;
+    private javax.swing.JLabel LabelNombre;
+    private javax.swing.JLabel LabelTelefono;
+    private javax.swing.JTextField TxtFieldApellidoM;
+    private javax.swing.JTextField TxtFieldApellidoP;
+    private javax.swing.JTextField TxtFieldNombre;
+    private javax.swing.JTextField TxtFieldTelefono;
     // End of variables declaration//GEN-END:variables
 }
